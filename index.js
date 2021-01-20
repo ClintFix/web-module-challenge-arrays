@@ -225,10 +225,6 @@ Use the getRandomFlavors function and new arrays below to do the following:
 */
 
 
-function getRandomFlavors(/*code here*/){
-    /*code here*/
-}
-
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
 const newFlavors = [
     "Date night",
@@ -255,7 +251,6 @@ const newFlavors = [
     "Rainbow Sherbet",
     "Rainbow Swirl"
 ] 
-
 const seasonalFlavors = [
     "America's Birthday Cake",
     "Baseball Nut®",
@@ -310,6 +305,46 @@ const regionalFlavors = [
     "Caramel 'n' Cookies"
 ]
 
+function getRandomFlavors(arr1, arr2, arr3, arr4){
+    const randomFlavors = [];
+    
+    for (let i = 0; i < 8;){
+        const randomInt = Math.floor(Math.random() * arr1.length);
+        if(randomFlavors.indexOf(arr1[randomInt]) !== -1) {
+            continue;
+        };
+        randomFlavors.push(arr1[randomInt]);
+        i++;
+    }
+    for (let i = 0; i < 8;){
+        const randomInt = Math.floor(Math.random() * arr2.length);
+        if(randomFlavors.indexOf(arr2[randomInt]) !== -1) {
+            continue;
+        };
+        randomFlavors.push(arr2[randomInt]);
+        i++;
+    }
+    for (let i = 0; i < 8;){
+        const randomInt = Math.floor(Math.random() * arr3.length);
+        if(randomFlavors.indexOf(arr3[randomInt]) !== -1) {
+            continue;
+        };
+        randomFlavors.push(arr3[randomInt]);
+        i++;
+    }
+    for (let i = 0; i < 7;){
+        const randomInt = Math.floor(Math.random() * arr4.length);
+        if(randomFlavors.indexOf(arr4[randomInt]) !== -1) {
+            continue;
+        };
+        randomFlavors.push(arr4[randomInt]);
+        i++;
+    }
+    console.log("random flavors are " + randomFlavors);
+    console.log(randomFlavors.length);
+}
+
+getRandomFlavors(originalFlavors, seasonalFlavors, regionalFlavors, newFlavors);
 
 
 /* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
