@@ -86,8 +86,10 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
+function addFlavor(array, flavor){
+   array.unshift(flavor);
+   console.log(array);
+   return array;
 }
 
 
